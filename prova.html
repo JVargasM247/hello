@@ -1,9 +1,29 @@
-<html>
-    <header>
-        
-    </header>
-    <body>
-        <h1>Title: Hello world!</h1>
+<!DOCTYPE html>
 
+<html lang="en">
+   <head>
+        <meta charset="UTF-8">
+        <title>Shopping List App</title>
+        <link rel="stylesheet" href="main.css">
+        
+    </head>
+    <body>
+        <div id="shopping-List"> 
+            <h1>{{header.toLocaleUpperCase()}}</h1>
+            <input v-model="header">
+        </div>
+        <script src="https://unpkg.com/vue@3"></script>
+        <script>
+             const shoppingList = Vue.createApp({
+                data(){
+                    return {
+                        header: "Vue is ready to party"
+                    }
+                }
+            })
+            .mount('#shopping-List')
+
+        </script>
+           
     </body>
 </html>
